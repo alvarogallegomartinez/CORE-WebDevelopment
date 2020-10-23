@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!--Bootstrap setup-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>Core Dumped WebSite Assignment</title>
 </head>
 
 <body>
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-1">Core Dumped Web Development</h1>
+      <p class="lead text-muted">Vamos a poner todos nuestros esfuerzos en que esta página web no te apuñale a los ojos de forma descarada y profunda.</p>
+      <p>
+        <a href="https://github.com/Gallego32" class="btn btn-primary my-2">Profile</a>
+        <a href="https://www.youtube.com/watch?v=018P39kGXdU" class="btn btn-secondary my-2">Pues algo bonito</a>
+      </p>
+    </div>
+</section>
 
-    <h1>Core Assignment N1</h1>
-    <p>Aquí hay que poner una imagen muy bonita</p>
+<section class="jumbotron text-center bg-dark">
+    <div class="container my-3 text-white">
 
-    <img src="Prueba.jpg" alt="Imagen" width="400" height=300>
-    <a href="https://github.com/Gallego32">GitHub Profile</a>
+        <h1>Assignment N1</h1>
+        <p>Recordemos la <kbd>bella</kbd> imagen inicial esta vez con un estilo superior</p>
+        
+        <img class="img-thumbnail img-fluid" src="Prueba.jpg" alt="Imagen" width="400" height=300>
+        <br>
+    </div>
+</section>
+
+<div class="container">
+    <div class="alert alert-info">
+        Siempre puedes encontrar más de mi trabajo y repositorios en mi
+        <a class="text-muted font-italic" href="https://github.com/Gallego32">página de GitHub</a>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-outline-danger" id="topButton" onclick="scrollFunction()">Going Up!</button>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-outline-danger" onclick="alertBox('¡Cuidado, EX PLOTA!')">Oye, quieres un poco de plota</button>
+    </div>
+</div>
 
 </body>
 

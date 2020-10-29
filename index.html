@@ -46,11 +46,41 @@
     </div>
 
     <div>
-        <button type="button" class="btn btn-outline-danger" id="topButton" onclick="scrollFunction()">Going Up!</button>
+        <button type="button" class="btn btn-outline-danger" id="topButton" onclick="scrollFunction()">Are you going down with the sickness?</button>
     </div>
 
     <div>
         <button type="button" class="btn btn-outline-danger" onclick="alertBox('¡Cuidado, EX PLOTA!')">Oye, quieres un poco de plota</button>
+    </div>
+    <br><br>
+    <!--Prueba tal y como vimos en el ejemplo del taller-->
+    <div>
+        <button type="button" class="btn btn-dark" onclick="getHora()">Prueba con API'S</button>
+        <p id="Hora"><span>&#8203;</span></p>
+    </div>
+    <!--
+    <div>
+        <button type="button" class="btn btn-dark" onclick="getHoraAlternative()">Prueba alternativa con API'S</button>
+        <p id="Hora"></p>
+    </div>
+    -->
+</div>
+<!--Ejemplo de API del tiempo-->
+<div class="container">
+    <div class="jumbotron">
+        <h1>El tiempo en tu ciudad</h1>
+        <p class="lead">
+            Vamos a hacer uso de la API
+            <a class="text-muted font-italic" href="https://openweathermap.org/">Open Weather</a>
+            para mostrar todas las ventajas que ofrecen las API'S.<br>
+            Además usaremos elementos del buscador para mostrar el tiempo en tu ciudad.
+        </p>
+        <button class="btn btn-lg btn-primary" onclick="getLocation()" role="button">Mostrar el tiempo</button>
+    <div class="row">
+        <p class="col" id="WeatherLocation"></p>
+        <p class="col" id="WeatherTemp"></p>
+    </div>
+
     </div>
 </div>
 

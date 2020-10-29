@@ -1,8 +1,9 @@
-/* Style sheet for Core Dumped Web Development course */
-* {
+/* Style sheet for Core Dumped Web Development course*/
+/** {*/
     /*text-align: center;*/
     /*background-color: lightblue;*/
-}
+/*}*/
+
 
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

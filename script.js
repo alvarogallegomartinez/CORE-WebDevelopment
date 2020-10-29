@@ -9,14 +9,14 @@ function alertBox(message) {
 
 // Llamada a una API que ya vimos para coger un poco de práctica
 function getHora(){
-    $.get("http://worldtimeapi.org/api/timezone/Europe/Madrid", (data, status) => {
+    $.get("https://worldtimeapi.org/api/timezone/Europe/Madrid", (data, status) => {
         document.getElementById("Hora").innerHTML = data.utc_datetime;
     });
 }
 
 // Alternativa de código para obtener el código anterior
 function getHoraAlternative() {
-    fetch("http://worldtimeapi.org/api/timezone/Europe/Madrid")
+    fetch("https://worldtimeapi.org/api/timezone/Europe/Madrid")
         .then((response) => {
             console.log(response.json());
         })
@@ -35,7 +35,7 @@ function getLocation() {
 // Dar el tiempo de la zona
 function getWeatherLocation(location) {
     if (navigator.geolocation) {
-        var url = "http://api.openweathermap.org/data/2.5/weather?appid=d56e45732611bc3d01077f50bd607104&units=metric&lat=" +
+        var url = "https://api.openweathermap.org/data/2.5/weather?appid=d56e45732611bc3d01077f50bd607104&units=metric&lat=" +
         location.coords.latitude + "&lon="  + location.coords.longitude;
 
         $.get(url, (data, status) => {

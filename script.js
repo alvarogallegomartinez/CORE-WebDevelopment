@@ -51,3 +51,39 @@ function getWeatherLocation(location) {
         });
     }
 }
+
+window.onload = getGitHubStars;
+
+// Colocar todos nuestros repositorios con sus estrellas correspondientes en un tabla
+function getGitHubStars() {
+    var url = "https://api.github.com/users/Gallego32/repos";
+
+    $.get(url, (data, status) => {
+        // Creación de una tabla a la que se le añaden todos los repositorios que tengas junto con sus estrellas
+        // En cada iteración del bucle for se crea una nueva fila
+        for (i = 0; i < data.length; i++) {
+            // Crear una nueva fila con su repositorio y sus estrellas correspondientes
+            var node = document.createElement("tr");
+
+            // Esta será la columna que llevará los nombres de los repositorios
+            var repoNode = document.createElement("td");
+
+            // Este es el link que hay que añadir a esta columna
+            var repoLink = document.createElement("a");
+            repoLink.innerText = data[i].name;
+            repoLink.setAttribute("href", data[i].html_url);
+
+            // Añadimos el link al elemento que define la columna
+            repoNode.appendChild(repoLink);
+
+            // Esta columna llevará las estrellas
+            var starsNode = document.createElement("td");
+            starsNode.innerText = data[i].stargazers_count;
+
+            // Terminamos de unir todos los elementos al fichero html
+            node.appendChild(repoNode);
+            node.appendChild(starsNode);
+            document.getElementById("RepoColumn").appendChild(node);
+        }
+    });
+}
